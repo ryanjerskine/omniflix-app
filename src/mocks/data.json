@@ -1,0 +1,43 @@
+{
+  "movies-dashboard-items": [
+    {
+      "title": "In Progress",
+      "items": [
+        {
+          "id": "",
+          "title": "",
+          "posterUri": "",
+          "fanartUri": "",
+          "watched": false,
+          "progressPercent": 0
+        }
+      ]
+    },
+    {
+      "title": "Because You Watched Avengers: Endgame",
+      "items": [
+        {
+          "id": "",
+          "title": "",
+          "posterUri": "",
+          "fanartUri": "",
+          "watched": false,
+          "progressPercent": 0
+        }
+      ]
+    },
+    {
+      "title": "Trending",
+      "items": [
+        {
+          "id": "",
+          "title": "",
+          "posterUri": "",
+          "fanartUri": "",
+          "watched": false,
+          "progressPercent": 0
+        }
+      ]
+    }
+  ]
+}
