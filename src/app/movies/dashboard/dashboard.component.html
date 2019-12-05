@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<div>
+  <div *ngFor="let mediaRow of (mediaRows$ | async)">
+    <omni-media-row [mediaRow]="mediaRow"></omni-media-row>
+  </div>
+</div>

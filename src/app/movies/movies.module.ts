@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { MoviesRoutingModule } from './movies-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MediaDisplaysModule } from '../media-displays/media-displays.module';
 
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [
+    DashboardComponent
+  ],
   imports: [
     CommonModule,
-    MoviesRoutingModule
+    MoviesRoutingModule,
+    MediaDisplaysModule
   ]
 })
 export class MoviesModule { }
