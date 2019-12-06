@@ -35,13 +35,11 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
 
   prev() {
     const index = Math.max(0, this.swiperRef.activeIndex - this.getSlidesPerView());
-    console.log(index);
     this.swiperRef.slideTo(index);
   }
 
   next() {
     const index = Math.min(this.mediaRow.items.length, this.swiperRef.activeIndex + this.getSlidesPerView());
-    console.log(index);
     this.swiperRef.slideTo(index);
   }
 
