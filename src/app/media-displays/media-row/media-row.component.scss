@@ -3,7 +3,47 @@
   height: auto;
 }
 /* NOTE: Movie posters are typically 2000x3000 */
+/*
+  Possible sizes:
+  - 180x270 and 480x270
+  - 150x225 and 400x225
+*/
 .swiper-slide {
-  width: 130px;
-  height: 195px;
+  height: auto;
+  width: 180px;
+  &.swiper-slide-wide {
+    width: 480px;
+  }
+  > img {
+    width: 100%;
+  }
+}
+
+.media-row {
+  > .media-title {
+    position: relative;
+    h3 {
+      display: inline-block;
+    }
+    > .media-buttons {
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      > button {
+        min-width: 0;
+        padding: 0 8px;
+        &:first-of-type {
+
+        }
+        &:last-of-type {
+          margin-left: 4px;
+        }
+        > .mat-icon {
+          font-size: 30px;
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
 }

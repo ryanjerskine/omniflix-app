@@ -11,6 +11,8 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() mediaRow: MediaRow;
   @ViewChild('swiper', { static: false }) swiperElem: ElementRef;
   private swiperRef: Swiper;
+  atStart: boolean;
+  atEnd: boolean;
 
   constructor() { }
 
@@ -19,6 +21,7 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    console.log(this.mediaRow);
     this.initSwiper();
   }
 
@@ -31,22 +34,38 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   prev() {
-    this.swiperRef.slidePrev();
+    const index = Math.max(0, this.swiperRef.activeIndex - this.getSlidesPerView());
+    console.log(index);
+    this.swiperRef.slideTo(index);
   }
 
   next() {
-    this.swiperRef.slideNext();
+    const index = Math.min(this.mediaRow.items.length, this.swiperRef.activeIndex + this.getSlidesPerView());
+    console.log(index);
+    this.swiperRef.slideTo(index);
   }
 
   ngOnDestroy() {
     this.swiperRef.destroy(true, true);
   }
 
+  private getSlidesPerView() {
+    const oneAtATime = true;
+    return oneAtATime ? 1 : 2; // TODO: Page past all of the visible slides if not oneAtATime
+  }
   private initSwiper() {
     const spaceBetween = 16;
     this.swiperRef = new Swiper(this.swiperElem.nativeElement, {
       slidesPerView: 'auto',
-      spaceBetween
+      spaceBetween,
+      init: false
     });
+    this.swiperRef.on('init', () => this.checkStartEnd());
+    this.swiperRef.on('transitionEnd', () => this.checkStartEnd());
+    setTimeout(() => (this.swiperRef as any).init());
+  }
+  private checkStartEnd() {
+    this.atStart = this.swiperRef.isBeginning;
+    this.atEnd = this.swiperRef.isEnd;
   }
 }

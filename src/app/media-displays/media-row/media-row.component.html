@@ -1,20 +1,23 @@
 <div *ngIf="mediaRow" class="media-row">
   <div class="media-title">
     <h3>{{mediaRow.title}}</h3>
-    <button type="button" aria-label="Previous Group of Media Items" (click)="prev()">
-      <mat-icon>keyboard_arrow_left</mat-icon>
-    </button>
-    <button type="button" aria-label="Next Group of Media Items" (click)="next()">
-      <mat-icon>keyboard_arrow_right</mat-icon>
-    </button>
+    <div class="media-buttons">
+      <button type="button" mat-button aria-label="Previous Group of Media Items" (click)="prev()" [disabled]="atStart">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button type="button" mat-button aria-label="Next Group of Media Items" (click)="next()" [disabled]="atEnd">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="media-row-items">
     <div #swiper class="swiper-container">
       <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide" style="background-color:yellow;">Slide 1</div>
-          <div class="swiper-slide" style="background-color:red;">Slide 2</div>
-          <div class="swiper-slide" style="background-color:blue;">Slide 3</div>
+        <div *ngFor="let mediaItem of mediaRow.items" class ="swiper-slide" [class.swiper-slide-wide]="false">
+          <img *ngIf="true" [src]="mediaItem.posterUri" alt="Media poster for {{mediaItem.title}}" />
+          <img *ngIf="false" [src]="mediaItem.fanartUri" alt="Media fanart for {{mediaItem.title}}" />
+          <h4>{{mediaItem.title}}</h4>
+        </div>
       </div>
     </div>
     <!--
