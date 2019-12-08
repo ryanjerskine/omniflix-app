@@ -5,10 +5,10 @@
       "items": [
         {
           "id": "197361db-15ef-4a39-9273-12d81feedaa5",
+          "type": "movie",
           "title": "Once Upon a Time in Hollywood",
           "subtitle": "2019",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "assets/img/grey-fanart.jpg",
+          "fanart": true,
           "watched": false,
           "progressPercent": 0
         },
@@ -17,8 +17,7 @@
           "type": "tv-show",
           "title": "Silicon Valley",
           "subtitle": "Season 10 Episode 10",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -27,18 +26,16 @@
           "type": "movie",
           "title": "Avengers: Endgame",
           "subtitle": "2019",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "assets/img/light-grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
         {
           "id": "a7639dc8-2d4a-486d-a893-7aafe1f48937",
           "type": "movie",
-          "title": "Ford vs Ferrari",
+          "title": "Ford v Ferrari",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -47,8 +44,7 @@
           "type": "tv-episode",
           "title": "The Mandalorian",
           "subtitle": "Season 10 Episode 10",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "assets/img/light-grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         }
@@ -62,8 +58,7 @@
           "type": "movie",
           "title": "Iron Man 2",
           "subtitle": "2010",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -72,8 +67,7 @@
           "type": "movie",
           "title": "Iron Man 3",
           "subtitle": "2013",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         }
@@ -87,8 +81,7 @@
           "type": "movie",
           "title": "Ad Astra",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -97,8 +90,7 @@
           "type": "movie",
           "title": "The Irishman",
           "subtitle": "2019",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "assets/img/grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -107,8 +99,7 @@
           "type": "movie",
           "title": "Ready Player One",
           "subtitle": "2018",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "assets/img/light-grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -117,8 +108,7 @@
           "type": "movie",
           "title": "Once Upon a Time in Hollywood",
           "subtitle": "2019",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "assets/img/grey-fanart.jpg",
+          "fanart": true,
           "watched": false,
           "progressPercent": 0
         },
@@ -127,8 +117,7 @@
           "type": "movie",
           "title": "Rambo: Last Blood",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -137,8 +126,7 @@
           "type": "movie",
           "title": "It Chapter Two",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -147,8 +135,7 @@
           "type": "movie",
           "title": "Angel Has Fallen",
           "subtitle": "2019",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "assets/img/grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -157,8 +144,7 @@
           "type": "movie",
           "title": "Abominable",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -167,8 +153,7 @@
           "type": "movie",
           "title": "Joker",
           "subtitle": "2019",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "assets/img/light-grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -177,8 +162,7 @@
           "type": "movie",
           "title": "Gemini Man",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -187,8 +171,7 @@
           "type": "movie",
           "title": "Hustlers",
           "subtitle": "2019",
-          "posterUri": "assets/img/grey-poster.jpg",
-          "fanartUri": "assets/img/grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -197,8 +180,7 @@
           "type": "movie",
           "title": "Fast & Furious Presents: Hobbs & Shaw",
           "subtitle": "2019",
-          "posterUri": "assets/img/light-grey-poster.jpg",
-          "fanartUri": "assets/img/light-grey-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         },
@@ -207,8 +189,7 @@
           "type": "movie",
           "title": "Ready or Not",
           "subtitle": "2019",
-          "posterUri": "assets/img/black-poster.jpg",
-          "fanartUri": "assets/img/black-fanart.jpg",
+          "fanart": false,
           "watched": false,
           "progressPercent": 0
         }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { MediaRow } from './media-row';
+import { MediaRow, MediaRowItem } from './media-row';
 import Swiper from 'swiper';
 
 @Component({
@@ -41,6 +41,17 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   next() {
     const index = Math.min(this.mediaRow.items.length, this.swiperRef.activeIndex + this.getSlidesPerView());
     this.swiperRef.slideTo(index);
+  }
+
+  getRouterLink(item: MediaRowItem) {
+    return item.type === 'movie' ? `movies/${item.id}` : `tv-shows/${item.id}`;
+  }
+
+  getMediaLink(item: MediaRowItem) {
+    if (item.fanart) {
+      return `${window.location.origin}/assets/img/fanarts/${item.id}.jpg`;
+    }
+    return `${window.location.origin}/assets/img/posters/${item.id}.jpg`;
   }
 
   ngOnDestroy() {
