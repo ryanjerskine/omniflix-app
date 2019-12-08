@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MoviesRoutingModule } from './movies-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MediaDisplaysModule } from '../media-displays/media-displays.module';
+import { MovieComponent } from './movie/movie.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    MovieComponent
   ],
   imports: [
     CommonModule,

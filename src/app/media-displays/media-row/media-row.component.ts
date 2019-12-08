@@ -44,7 +44,7 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   getRouterLink(item: MediaRowItem) {
-    return item.type === 'movie' ? `movies/${item.id}` : `tv-shows/${item.id}`;
+    return item.type === 'movie' ? `/movies/${item.id}` : `/tv-shows/${item.id}`;
   }
 
   getMediaLink(item: MediaRowItem) {
