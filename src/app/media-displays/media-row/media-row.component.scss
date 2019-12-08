@@ -23,16 +23,20 @@
 .swiper-slide {
   height: auto;
   width: 180px;
-  img {
-    height: 270px;
-    border-radius: 2px;
-  }
   &.swiper-slide-wide {
     width: 480px;
   }
   > .image-wrapper {
     position: relative;
     border: 2px solid transparent;
+    img {
+      height: 270px;
+      border-radius: 2px;
+    }
+    .mat-progress-bar {
+      position: absolute;
+      bottom: 0;
+    }
     > a {
       position: absolute;
       top: 0;
@@ -62,6 +66,14 @@
     padding: 0 5px;
     line-height: 16px;
     font-size: 15px;
+  }
+
+  &:hover {
+    > .image-wrapper {
+      .mat-progress-bar {
+        bottom: 2px;
+      }
+    }
   }
 }
 

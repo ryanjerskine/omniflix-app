@@ -19,7 +19,7 @@
           "subtitle": "Season 10 Episode 10",
           "fanart": false,
           "watched": false,
-          "progressPercent": 0
+          "progressPercent": 40
         },
         {
           "id": "49181eb6-e1f0-4ab9-ab4a-f2cbd87e3591",
@@ -169,7 +169,7 @@
         {
           "id": "55c02722-f41b-4005-b6f4-b5d7982152e3",
           "type": "movie",
-          "title": "Hustlers",
+          "title": "Shazam",
           "subtitle": "2019",
           "fanart": false,
           "watched": false,

@@ -15,6 +15,7 @@
       <div *ngFor="let mediaItem of mediaRow.items" class ="swiper-slide" [class.swiper-slide-wide]="mediaItem.fanart">
         <div class="image-wrapper">
           <img [src]="getMediaLink(mediaItem)" alt="Media for {{mediaItem.title}}" />
+          <mat-progress-bar *ngIf="mediaItem.progressPercent !== 0" mode="determinate" [value]="mediaItem.progressPercent"></mat-progress-bar>
           <a [routerLink]="getRouterLink(mediaItem)" mat-button></a>
         </div>
         <a [routerLink]="getRouterLink(mediaItem)" mat-button>{{mediaItem.title}}</a>
