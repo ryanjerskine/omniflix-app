@@ -1,20 +1,23 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
     TODO: Add stuff here
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav [@openCloseSidenav]="isOpen ? 'open' : 'closed'" #sidenav mode="side" opened class="example-sidenav" color="primary">
     <mat-nav-list>
-      <mat-list-item [routerLink]="['/']">
+      <mat-list-item [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon matListIcon>home</mat-icon>
         <h3 mat-line>Home</h3>
       </mat-list-item>
-      <mat-list-item [routerLink]="['/movies']">
-        <mat-icon matListIcon>movie</mat-icon>
+      <mat-list-item [routerLink]="['/movies']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon matListIcon>local_movies</mat-icon>
         <h3 mat-line>Movies</h3>
       </mat-list-item>
-      <mat-list-item [routerLink]="['/tv-shows']">
+      <mat-list-item [routerLink]="['/tv-shows']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <mat-icon matListIcon>tv</mat-icon>
         <h3 mat-line>TV Shows</h3>
       </mat-list-item>
