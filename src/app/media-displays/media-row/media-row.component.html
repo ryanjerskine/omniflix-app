@@ -13,12 +13,12 @@
   <div #swiper class="swiper-container">
     <div class="swiper-wrapper">
       <div *ngFor="let mediaItem of mediaRow.items" class ="swiper-slide" [class.swiper-slide-wide]="mediaItem.fanart">
-        <div class="image-wrapper">
+        <div class="image-wrapper" [class.menu-active]="mediaItem.menuOpen">
           <img [src]="getMediaLink(mediaItem)" alt="Media for {{mediaItem.title}}" />
           <mat-progress-bar *ngIf="mediaItem.progressPercent !== 0" mode="determinate" [value]="mediaItem.progressPercent"></mat-progress-bar>
           <a [routerLink]="getRouterLink(mediaItem)" mat-button></a>
-          <mat-checkbox color="primary" [checked]="mediaItem.watched" [class.selected]="mediaItem.watched" class="animated slideInLeft faster"></mat-checkbox>
-          <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" class="animated slideInRight faster" aria-label="Open menu for media">
+          <mat-checkbox color="primary" [checked]="mediaItem.watched" (change)="toggleWatched(mediaItem)" [class.selected]="mediaItem.watched" class="animated slideInLeft faster"></mat-checkbox>
+          <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" (menuOpened)="toggleMenu(mediaItem, true)" (menuClosed)="toggleMenu(mediaItem, false)" class="animated slideInRight faster" aria-label="Open menu for media">
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">

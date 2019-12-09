@@ -13,4 +13,6 @@ export interface MediaRowItem {
   fanartUri: string;
   watched: boolean;
   progressPercent: number;
+
+  menuOpen: boolean;
 }

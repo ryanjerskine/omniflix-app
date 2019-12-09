@@ -54,6 +54,14 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
     return `${window.location.origin}/assets/img/posters/${item.id}.jpg`;
   }
 
+  toggleWatched(item: MediaRowItem) {
+    item.watched = !item.watched;
+  }
+
+  toggleMenu(item: MediaRowItem, status: boolean) {
+    item.menuOpen = status;
+  }
+
   ngOnDestroy() {
     this.swiperRef.destroy(true, true);
   }
