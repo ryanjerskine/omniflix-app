@@ -62,6 +62,7 @@
       > .image-wrapper {
         position: relative;
         border: 2px solid transparent;
+        overflow: hidden;
         .mat-checkbox {
           display: none;
           position: absolute;
@@ -85,6 +86,12 @@
           right: 0;
           border-radius: 2px;
         }
+        > button {
+          display: none;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
         &:hover,
         &:active,
         &:focus {
@@ -93,6 +100,9 @@
           }
           > a {
             border: 2px solid $color-primary;
+          }
+          > button {
+            display: block;
           }
         }
       }

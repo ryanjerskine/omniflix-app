@@ -17,7 +17,20 @@
           <img [src]="getMediaLink(mediaItem)" alt="Media for {{mediaItem.title}}" />
           <mat-progress-bar *ngIf="mediaItem.progressPercent !== 0" mode="determinate" [value]="mediaItem.progressPercent"></mat-progress-bar>
           <a [routerLink]="getRouterLink(mediaItem)" mat-button></a>
-          <mat-checkbox color="primary" [checked]="mediaItem.watched" [class.selected]="mediaItem.watched"></mat-checkbox>
+          <mat-checkbox color="primary" [checked]="mediaItem.watched" [class.selected]="mediaItem.watched" class="animated slideInLeft faster"></mat-checkbox>
+          <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" class="animated slideInRight faster" aria-label="Open menu for media">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>watch_later</mat-icon>
+              <span>Add to watchlist</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>report_problem</mat-icon>
+              <span>Report a problem</span>
+            </button>
+          </mat-menu>
         </div>
         <a [routerLink]="getRouterLink(mediaItem)" mat-button>{{mediaItem.title}}</a>
         <span class="mat-caption">{{mediaItem.subtitle}}</span>
