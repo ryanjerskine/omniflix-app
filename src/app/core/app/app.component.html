@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    TODO: Add stuff here
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav [@openCloseSidenav]="isOpen ? 'open' : 'closed'" #sidenav mode="side" opened class="example-sidenav" color="primary">
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['/']">
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 mat-line>Home</h3>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/movies']">
+        <mat-icon matListIcon>movie</mat-icon>
+        <h3 mat-line>Movies</h3>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/tv-shows']">
+        <mat-icon matListIcon>tv</mat-icon>
+        <h3 mat-line>TV Shows</h3>
+      </mat-list-item>
+      <h3 matSubheader>Actions</h3>
+      <mat-list-item>
+        <mat-icon matListIcon>swap_vert</mat-icon>
+        <h3 mat-line>Scan Library</h3>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content [@openCloseSidenavContent]="isOpen ? 'open' : 'closed'" [class.sidenav-collapsed]="!isOpen">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
