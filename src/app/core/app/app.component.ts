@@ -13,5 +13,6 @@ export class AppComponent {
 
   toggle() {
     this.isOpen = !this.isOpen;
+    setTimeout(() => window.dispatchEvent(new Event('resize')), 300);
   }
 }

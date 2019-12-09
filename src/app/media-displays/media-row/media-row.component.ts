@@ -56,6 +56,7 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
 
   toggleWatched(item: MediaRowItem) {
     item.watched = !item.watched;
+    this.swiperRef.update();
   }
 
   toggleMenu(item: MediaRowItem, status: boolean) {
