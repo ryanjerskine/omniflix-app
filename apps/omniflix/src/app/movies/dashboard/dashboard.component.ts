@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
 
 @Component({
-  selector: 'omni-dashboard',
+  selector: 'omniflix-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })

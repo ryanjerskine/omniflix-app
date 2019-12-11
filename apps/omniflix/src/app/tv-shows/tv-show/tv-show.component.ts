@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'omni-tv-show',
+  selector: 'omniflix-tv-show',
   templateUrl: './tv-show.component.html',
   styleUrls: ['./tv-show.component.scss']
 })

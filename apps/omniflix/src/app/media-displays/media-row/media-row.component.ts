@@ -3,7 +3,7 @@ import { ClientMediaRow, ClientMediaRowItem } from './media-row';
 import Swiper from 'swiper';
 
 @Component({
-  selector: 'omni-media-row',
+  selector: 'omniflix-media-row',
   templateUrl: './media-row.component.html',
   styleUrls: ['./media-row.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { sideNavAnimation, sideNavContainerAnimation } from './sidenav.animations';
 
 @Component({
-  selector: 'omni-root',
+  selector: 'omniflix-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [sideNavAnimation, sideNavContainerAnimation]
