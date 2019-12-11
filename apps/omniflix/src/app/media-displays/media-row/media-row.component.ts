@@ -21,7 +21,6 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.mediaRow);
     this.initSwiper();
   }
 
@@ -72,6 +71,9 @@ export class MediaRowComponent implements OnInit, OnDestroy, AfterViewInit {
     return oneAtATime ? 1 : 2; // TODO: Page past all of the visible slides if not oneAtATime
   }
   private initSwiper() {
+    if (!this.swiperElem || !this.swiperElem.nativeElement) {
+      return; // TODO: Log error
+    }
     const spaceBetween = 16;
     this.swiperRef = new Swiper(this.swiperElem.nativeElement, {
       slidesPerView: 'auto',
