@@ -5,10 +5,10 @@ steps:
     displayName: 'Install Node.js'
   - task: 1ESLighthouseEng.PipelineArtifactCaching.RestoreAndSaveCacheV1.RestoreAndSaveCache@1
     inputs:
-      keyfile: '**/yarn.lock, !**/node_modules/**/yarn.lock, !**/.*/**/yarn.lock'
+      keyfile: '**/package-lock.json, !**/node_modules/**/package-lock.json, !**/.*/**/package-lock.json'
       targetfolder: '**/node_modules, !**/node_modules/**/node_modules'
       vstsFeed: 'nx_azure_node_modules_cache_feed'
   - script: |
-      yarn install --ignore-engines --frozen-lockfile
+      npm ci --prefer-offline --no-audit
     displayName: Install dependencies only if there is no cache available
     condition: ne(variables['CacheRestored'], 'true')

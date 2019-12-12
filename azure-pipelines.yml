@@ -6,8 +6,10 @@ jobs:
     timeoutInMinutes: 120
     pool:
       vmImage: 'ubuntu-latest'
+    variables:
+      IS_PR: $[ eq(variables['Build.Reason'], 'PullRequest') ]
     steps:
       - template: .azure-pipelines/install-node-modules.yml
-      - script: yarn nx run-many --target=lint --all
-      - script: yarn nx run-many --target=test --all
-      - script: yarn nx run-many --target=build --all --prod
+      - script: npm nx affected run-many --target=lint --base=origin/master --parallel
+      - script: npm nx affected run-many --target=test --all --base=origin/master
+      - script: npm nx affected run-many --target=build --all --prod --parallel
