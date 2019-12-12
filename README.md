@@ -1,3 +1,5 @@
+[![Build Status](https://ryanjerskine.visualstudio.com/ryanerskine.dev/_apis/build/status/ryanjerskine.omniflix-app?branchName=master)](https://ryanjerskine.visualstudio.com/ryanerskine.dev/_build/latest?definitionId=4&branchName=master)
+
 # Omniflix
 
 This project was generated using [Nx](https://nx.dev).
