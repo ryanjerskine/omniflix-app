@@ -9,7 +9,12 @@ jobs:
     variables:
       IS_PR: $[ eq(variables['Build.Reason'], 'PullRequest') ]
     steps:
-      - template: .azure-pipelines/install-node-modules.yml
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '10.x'
+        displayName: 'Install Node.js and dependencies'
+      - script: npm install --prefer-offline --no-audit
+        condition: ne(variables['CacheRestored'], 'true')
       - script: npm nx affected run-many --target=lint --base=origin/master --parallel
       - script: npm nx affected run-many --target=test --all --base=origin/master
       - script: npm nx affected run-many --target=build --all --prod --parallel
